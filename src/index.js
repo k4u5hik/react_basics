@@ -2,9 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 function Greeting() {
-  return <h1>Hello World! This is my first component</h1>
+  return (
+    <div>
+      <h1>Hello World! This is my first component. It is working!</h1>
+    </div>
+  )
 }
 
-ReactDOM.render(<Greeting />, document.getElementById('root'))
+// const Greeting = () => {
+//   return React.createElement(
+//     'div',
+//     {},
+//     React.createElement('h1', {}, 'Hello World!')
+//   )
+// }
+// this code is how it works but is more unreadable than the above code
 
-// changed vscode settings
+ReactDOM.render(<Greeting />, document.getElementById('root'))
