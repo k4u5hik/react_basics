@@ -3,26 +3,31 @@ import ReactDOM from 'react-dom'
 
 import './index.css'
 
+const title = 'The Catcher in the Rye'
+const author = 'J.D. Salinger'
+const img =
+  'https://images-fe.ssl-images-amazon.com/images/I/81h9Ilh0nIL._AC_UL232_SR232,232_.jpg'
+
 function BookList() {
   return (
     <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   )
 }
 
-const author = 'J.D. Salinger'
-const Book = () => {
-  const title = 'The Catcher in the Rye'
+const Book = (props) => {
+  console.log(props)
   return (
     <article className='book'>
-      <img
-        src='https://images-fe.ssl-images-amazon.com/images/I/81h9Ilh0nIL._AC_UL232_SR232,232_.jpg'
-        alt=''
-      />
+      <img src={img} alt={title} />
       <h1> {title} </h1>
-      <h4> {author.toUpperCase()} </h4>
-      <p>$ {6 + 6}</p>
+      <h4> {author} </h4>
+      {console.log(props)}
     </article>
   )
 }
