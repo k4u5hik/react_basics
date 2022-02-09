@@ -25,6 +25,7 @@ const Book = (props) => {
       <h1> {title} </h1>
       <h4> {author} </h4>
       <p>{props.job}</p>
+      <p>{props.title}</p>
     </article>
   )
 }
