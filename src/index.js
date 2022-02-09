@@ -7,36 +7,24 @@ function BookList() {
   return (
     <section className='booklist'>
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   )
 }
 
+const author = 'J.D. Salinger'
 const Book = () => {
+  const title = 'The Catcher in the Rye'
   return (
     <article className='book'>
-      <Image></Image>
-      <Title></Title>
-      <Author></Author>
+      <img
+        src='https://images-fe.ssl-images-amazon.com/images/I/81h9Ilh0nIL._AC_UL232_SR232,232_.jpg'
+        alt=''
+      />
+      <h1> {title} </h1>
+      <h4> {author.toUpperCase()} </h4>
+      <p>$ {6 + 6}</p>
     </article>
   )
 }
-const Image = () => (
-  <img
-    src='https://images-fe.ssl-images-amazon.com/images/I/81h9Ilh0nIL._AC_UL232_SR232,232_.jpg'
-    alt=''
-  />
-)
-
-const Title = () => <h1> This is the book title </h1>
-const Author = () => (
-  <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-    This is the book author
-  </h4>
-)
 
 ReactDOM.render(<BookList />, document.getElementById('root'))
