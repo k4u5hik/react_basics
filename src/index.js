@@ -3,17 +3,14 @@ import ReactDOM from 'react-dom'
 
 function Greeting() {
   return (
-    <React.Fragment>
-      <div>
-        <h1>Hello World! This is my first component. It is working!</h1>
-        <ul>
-          <li>
-            <a href='#'>Hello People</a>
-          </li>
-        </ul>
-      </div>
-    </React.Fragment>
+    <div>
+      <Person />
+      <Message />
+    </div>
   )
 }
+
+const Person = () => <h1>Hello World!!</h1>
+const Message = () => <p>This is my message</p>
 
 ReactDOM.render(<Greeting />, document.getElementById('root'))
