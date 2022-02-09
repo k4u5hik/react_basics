@@ -1,9 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import './index.css'
+
 function BookList() {
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   )
@@ -11,16 +18,16 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
-      <Title></Title>
+    <article className='book'>
       <Image></Image>
+      <Title></Title>
       <Author></Author>
     </article>
   )
 }
 const Image = () => (
   <img
-    src='https://m.media-amazon.com/images/I/91uFdkCJmAL._AC_UY436_FMwebp_QL65_.jpg'
+    src='https://images-fe.ssl-images-amazon.com/images/I/81h9Ilh0nIL._AC_UL232_SR232,232_.jpg'
     alt=''
   />
 )
