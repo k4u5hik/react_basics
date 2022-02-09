@@ -33,6 +33,10 @@ const Image = () => (
 )
 
 const Title = () => <h1> This is the book title </h1>
-const Author = () => <h4> This is the book author </h4>
+const Author = () => (
+  <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
+    This is the book author
+  </h4>
+)
 
 ReactDOM.render(<BookList />, document.getElementById('root'))
