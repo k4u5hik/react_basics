@@ -11,6 +11,8 @@ function Greeting() {
 }
 
 const Person = () => <h1>Hello World!!</h1>
-const Message = () => <p>This is my message</p>
+const Message = () => {
+  return <p>This is my message</p>
+}
 
 ReactDOM.render(<Greeting />, document.getElementById('root'))
