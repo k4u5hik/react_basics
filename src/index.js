@@ -3,29 +3,41 @@ import ReactDOM from 'react-dom'
 
 import './index.css'
 
-const title = 'The Catcher in the Rye'
-const author = 'J.D. Salinger'
-const img =
-  'https://images-fe.ssl-images-amazon.com/images/I/81h9Ilh0nIL._AC_UL232_SR232,232_.jpg'
+const firstBook = {
+  title: 'The Lord of the Rings',
+  author: 'J.R.R. Tolkien',
+  img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhsqsuiuuvY0XY1Sh4kwLjZmUsRtj_qYKA6DcpIETPubqUF335Rs_LES6wNt0yxzMqE0g&usqp=CAU',
+}
+
+const secondBook = {
+  title: 'The Catcher in the Rye',
+  author: 'J.D. Salinger',
+  img: 'https://static.tvtropes.org/pmwiki/pub/images/selindjer_nad_propastyu_vo_rji.jpg',
+}
 
 function BookList() {
   return (
     <section className='booklist'>
-      <Book job='developer' />
-      <Book title='random title' number={22} />
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   )
 }
 
 const Book = (props) => {
-  console.log(props)
   return (
     <article className='book'>
-      <img src={img} alt={title} />
-      <h1> {title} </h1>
-      <h4> {author} </h4>
-      <p>{props.job}</p>
-      <p>{props.title}</p>
+      <img src={props.img} alt='' />
+      <h1> {props.title} </h1>
+      <h4> {props.author} </h4>
     </article>
   )
 }
