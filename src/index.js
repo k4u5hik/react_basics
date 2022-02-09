@@ -11,11 +11,8 @@ const img =
 function BookList() {
   return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book job='developer' />
+      <Book title='random title' number={22} />
     </section>
   )
 }
