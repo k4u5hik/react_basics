@@ -37,14 +37,21 @@ function BookList() {
 const Book = ({ title, author, img }) => {
   // attribute, eventHandler
   // onClick and onMouseOver
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    console.log(e)
+    console.log(e.target)
     alert('hello world!')
   }
   const anotherExample = (author) => {
     console.log(author)
   }
   return (
-    <article className='book'>
+    <article
+      className='book'
+      onMouseOver={() => {
+        console.log(title)
+      }}
+    >
       <img src={img} alt='' />
       <h1 onClick={() => console.log(title)}> {title} </h1>
       <h4> {author} </h4>
