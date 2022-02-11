@@ -40,14 +40,19 @@ const Book = ({ title, author, img }) => {
   const clickHandler = () => {
     alert('hello world!')
   }
+  const anotherExample = (author) => {
+    console.log(author)
+  }
   return (
     <article className='book'>
       <img src={img} alt='' />
       <h1 onClick={() => console.log(title)}> {title} </h1>
       <h4> {author} </h4>
       <button type='button' onClick={clickHandler}>
-        {' '}
         Reference Example
+      </button>
+      <button type='button' onClick={() => anotherExample(author)}>
+        Another Example
       </button>
     </article>
   )
